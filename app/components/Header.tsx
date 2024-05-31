@@ -11,7 +11,7 @@ const Header: React.FC<PropsWithClassName> = ({ className }) => {
   return (
     <header
       className={twMerge(
-        "grid grid-cols-2 rounded-xl bg-blue-200 px-2 py-4",
+        "grid h-auto grid-cols-2 rounded-xl bg-blue-200 px-2 py-4",
         className,
       )}
     >
@@ -26,12 +26,13 @@ const Header: React.FC<PropsWithClassName> = ({ className }) => {
       </button>
       <Transition
         show={isOpened}
-        enter="transition-opacity duration-300"
-        enterFrom="opacity-0"
-        enterTo="opacity-100"
-        leave="transition-opacity duration-150"
-        leaveFrom="opacity-100"
-        leaveTo="opacity-0"
+        enter="transition-transform duration-300 origin-top"
+        enterFrom="transorm scale-y-0"
+        enterTo="transform scale-y-1"
+        leave="transition-transform duration-150 origin-top"
+        leaveFrom="transform scale-y-1"
+        leaveTo="transform scale-y-0"
+        appear
       >
         <Menu />
       </Transition>

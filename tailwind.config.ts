@@ -1,82 +1,80 @@
-import type { Config } from "tailwindcss";
+import type { Config } from "tailwindcss"
 
-const config: Config = {
+const config = {
+  darkMode: ["class"],
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
+	],
+  prefix: "",
   theme: {
-    extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
       },
+    },
+    extend: {
       colors: {
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
         primary: {
-          50: "#f9fafb",
-          100: "#f3f6f8",
-          200: "#e5ebf1",
-          300: "#d6e1ea",
-          400: "#b9cddc",
-          500: "#9cb9ce",
-          600: "#8ca7ba",
-          700: "#748fa1",
-          800: "#5c7788",
-          900: "#4a6270",
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
-          50: "#f9fafb",
-          100: "#f3f6f8",
-          200: "#e5ebf1",
-          300: "#d6e1ea",
-          400: "#b9cddc",
-          500: "#9cb9ce",
-          600: "#8ca7ba",
-          700: "#748fa1",
-          800: "#5c7788",
-          900: "#4a6270",
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
         },
-        success: {
-          50: "#f3faf7",
-          100: "#e0f5eb",
-          200: "#b8e7cf",
-          300: "#8ad9b2",
-          400: "#3ecf8a",
-          500: "#02c561",
-          600: "#02b456",
-          700: "#029b4a",
-          800: "#027c3c",
-          900: "#015e2f",
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
         },
-        danger: {
-          50: "#fdf2f2",
-          100: "#fde8e8",
-          200: "#f8b4b4",
-          300: "#f17f7f",
-          400: "#e93f3f",
-          500: "#e00000",
-          600: "#c90000",
-          700: "#a70000",
-          800: "#8a0000",
-          900: "#700000",
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
         },
-        warning: {
-          50: "#fdf8f1",
-          100: "#faeddb",
-          200: "#f3d6b2",
-          300: "#eccf8c",
-          400: "#e0b84a",
-          500: "#dca30a",
-          600: "#c49209",
-          700: "#a47b07",
-          800: "#876406",
-          900: "#6f5205",
-        }
-      }
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
+      keyframes: {
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+      },
     },
   },
-  plugins: [],
-};
-export default config;
+  plugins: [require("tailwindcss-animate")],
+} satisfies Config
+
+export default config
