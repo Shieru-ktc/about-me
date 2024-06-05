@@ -2,40 +2,41 @@
 
 import { twMerge } from "tailwind-merge";
 import PropsWithClassName from "../utils";
-import { useState } from "react";
 import Menu from "./Menu";
-import { Transition } from "@headlessui/react";
+import { Button } from "@/components/ui/button";
+import { useTheme } from "next-themes";
+import {
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+} from "@/components/ui/dropdown-menu";
+import DropdownLinkMenuItem from "./DropdownLinkMenuItem";
+import { BsMoon, BsSun } from "react-icons/bs";
+import { MenuIcon } from "lucide-react";
+import HeaderMenu from "./HeaderMenu";
 
 const Header: React.FC<PropsWithClassName> = ({ className }) => {
-  const [isOpened, setIsOpened] = useState(false);
+  const { theme, setTheme } = useTheme();
+
   return (
     <header
       className={twMerge(
-        "grid h-auto grid-cols-2 rounded-xl bg-blue-200 px-2 py-4",
+        "grid h-auto grid-cols-2 rounded-xl bg-blue-200 px-2 py-4 dark:bg-blue-800",
         className,
       )}
     >
       <span className="text-xl font-bold">じこしょーかい</span>
-      <button
-        onClick={() => {
-          setIsOpened(!isOpened);
-        }}
-        className="ml-auto"
-      >
-        ボタン
-      </button>
-      <Transition
-        show={isOpened}
-        enter="transition-transform duration-300 origin-top"
-        enterFrom="transorm scale-y-0"
-        enterTo="transform scale-y-1"
-        leave="transition-transform duration-150 origin-top"
-        leaveFrom="transform scale-y-1"
-        leaveTo="transform scale-y-0"
-        appear
-      >
-        <Menu />
-      </Transition>
+      <div className="ml-auto flex">
+        <Menu
+          trigger={
+            <Button className="p-3" variant="ghost">
+              <MenuIcon />
+            </Button>
+          }
+        >
+          <HeaderMenu />
+        </Menu>
+      </div>
     </header>
   );
 };

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
+import { ThemeProvider } from "./components/theme-provider";
+import { twMerge } from "tailwind-merge";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,10 +18,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <Header className="m-1" />
-        {children}
+    <html lang="en" suppressHydrationWarning>
+      <body className={twMerge(inter.className, "transition-all ease-in-out")}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          storageKey="theme"
+        >
+          <div className="flex min-h-screen flex-col">
+            <Header className="sticky top-0 z-50 m-1" />
+            <div className="flex-grow">
+              <main>{children}</main>
+            </div>
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );
