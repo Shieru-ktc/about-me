@@ -9,5 +9,6 @@
     "leave",
     "leaveFrom",
     "leaveTo"
-  ]
+  ],
+  "editor.indentSize": 2
 }
