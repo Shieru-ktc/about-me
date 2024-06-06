@@ -19,18 +19,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={twMerge(inter.className, "transition-all ease-in-out")}>
+      <body
+        className={twMerge(
+          inter.className,
+          "overflow-y-scroll transition-all ease-in-out",
+        )}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
           enableSystem
           storageKey="theme"
         >
-          <div className="flex min-h-screen flex-col">
+          <div>
             <Header className="sticky top-0 z-50 m-1" />
-            <div className="flex-grow">
-              <main>{children}</main>
-            </div>
+            <div className="mx-8 my-2 md:mx-16 lg:mx-32">{children}</div>
           </div>
         </ThemeProvider>
       </body>
