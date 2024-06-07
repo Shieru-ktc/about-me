@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "./components/Header";
 import { ThemeProvider } from "./components/theme-provider";
 import { twMerge } from "tailwind-merge";
+import { Toaster } from "@/components/ui/toaster";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -34,6 +35,7 @@ export default function RootLayout({
           <div>
             <Header className="sticky top-0 z-50 m-1" />
             <div className="mx-8 my-2 md:mx-16 lg:mx-32">{children}</div>
+            <Toaster />
           </div>
         </ThemeProvider>
       </body>

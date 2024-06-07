@@ -29,7 +29,7 @@ const Header: React.FC<PropsWithClassName> = ({ className }) => {
         className,
       )}
     >
-      <span className="text-xl font-bold">じこしょーかい</span>
+      <span className="my-auto text-2xl font-bold">じこしょーかい</span>
       <div className="ml-auto flex">
         <HeaderMenu items={MENU_ITEMS} />
       </div>

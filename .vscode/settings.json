@@ -2,6 +2,7 @@
   "tailwindCSS.classAttributes": [
     "class",
     "className",
+    "inputClassName",
     "ngClass",
     "enter",
     "enterFrom",
