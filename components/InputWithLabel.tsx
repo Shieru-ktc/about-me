@@ -2,7 +2,7 @@ import { Input, InputProps } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { LabelProps } from "@radix-ui/react-label";
 import { randomUUID } from "crypto";
-import PropsWithClassName from "../utils";
+import PropsWithClassName from "../app/utils";
 import { twMerge } from "tailwind-merge";
 
 type InputWithLabelProps = {

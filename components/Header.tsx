@@ -1,5 +1,5 @@
 import { twMerge } from "tailwind-merge";
-import PropsWithClassName from "../utils";
+import PropsWithClassName from "../app/utils";
 import HeaderMenu, { HeaderMenuItem } from "./HeaderMenu";
 
 const MENU_ITEMS: HeaderMenuItem[] = [

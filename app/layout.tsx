@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "./components/Header";
-import { ThemeProvider } from "./components/theme-provider";
+import Header from "../components/Header";
+import { ThemeProvider } from "../components/theme-provider";
 import { twMerge } from "tailwind-merge";
 import { Toaster } from "@/components/ui/toaster";
 
