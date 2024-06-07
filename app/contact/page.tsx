@@ -1,5 +1,5 @@
 "use client";
-import { ControllerRenderProps, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/components/ui/button";
@@ -12,11 +12,6 @@ import { useState } from "react";
 import { useToast } from "@/components/ui/use-toast";
 import React from "react";
 
-type MyInputProps = {
-  placeholder: string;
-  disabled: boolean;
-  field: ControllerRenderProps<any>;
-};
 const formSchema = z.object({
   email: z
     .string({
@@ -62,68 +57,7 @@ const Contact: React.FC = () => {
   };
 
   const [sendState, setSendState] = useState<SendState>("not_sent");
-  const MyInput: React.FC<MyInputProps> = React.memo(
-    ({ placeholder, disabled, field }) => {
-      return <Input placeholder={placeholder} disabled={disabled} {...field} />;
-    },
-  );
 
-  const FormComponent = () => {
-    return (
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-        <FormField
-          control={form.control}
-          name="email"
-          render={({ field }) => (
-            <RenderFormItem
-              label="メールアドレス"
-              description="返信先のメールアドレス"
-            >
-              <MyInput
-                placeholder="Enter your email"
-                disabled={sendState === "sending"}
-                field={field}
-              />
-            </RenderFormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="name"
-          render={({ field }) => (
-            <RenderFormItem label="おなまえ" description="あなたの名前">
-              <MyInput
-                placeholder="山田田中"
-                disabled={sendState === "sending"}
-                field={field}
-              />
-              {/* なんか再レンダリングされる？ */}
-            </RenderFormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="content"
-          render={({ field }) => (
-            <RenderFormItem label="お問い合わせ内容">
-              <Textarea
-                placeholder="例: Webサイトのコンテンツが不十分です…"
-                {...field}
-                rows={10}
-                disabled={sendState === "sending"}
-              />
-            </RenderFormItem>
-          )}
-        />
-        <Button type="submit">
-          {sendState === "sending" && (
-            <div className="mr-1 h-5 w-5 animate-spin rounded-full border-2 border-t-transparent" />
-          )}
-          <FaPaperPlane className="mr-1" /> 送信
-        </Button>
-      </form>
-    );
-  };
   return (
     <Form {...form}>
       {sendState === "sent" ? (
@@ -144,7 +78,60 @@ const Contact: React.FC = () => {
           </Button>
         </>
       ) : (
-        <FormComponent />
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+          <FormField
+            control={form.control}
+            name="email"
+            render={({ field }) => (
+              <RenderFormItem
+                label="メールアドレス"
+                description="返信先のメールアドレス"
+              >
+                <Input
+                  placeholder="Enter your email"
+                  disabled={sendState === "sending"}
+                  autoComplete="off"
+                  {...field}
+                />
+              </RenderFormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="name"
+            render={({ field }) => (
+              <RenderFormItem label="おなまえ" description="あなたの名前">
+                <Input
+                  placeholder="山田田中"
+                  disabled={sendState === "sending"}
+                  autoComplete="off"
+                  {...field}
+                />
+              </RenderFormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="content"
+            render={({ field }) => (
+              <RenderFormItem label="お問い合わせ内容">
+                <Textarea
+                  placeholder="例: Webサイトのコンテンツが不十分です…"
+                  {...field}
+                  rows={10}
+                  disabled={sendState === "sending"}
+                />
+              </RenderFormItem>
+            )}
+          />
+          <Button type="submit">
+            {sendState === "sending" && (
+              <div className="mr-1 h-5 w-5 animate-spin rounded-full border-2 border-t-transparent" />
+            )}
+            <FaPaperPlane className="mr-1" />{" "}
+            {sendState === "not_sent" ? "送信" : "送信中…"}
+          </Button>
+        </form>
       )}
     </Form>
   );

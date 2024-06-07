@@ -13,18 +13,19 @@ type RenderFormItemProps = {
   children: ReactNode;
 } & PropsWithChildren;
 
-const RenderFormItem: React.FC<RenderFormItemProps> = React.memo(
-  ({ label, description, children }) => {
-    console.log("rendered");
-    return (
-      <FormItem>
-        <FormLabel>{label}</FormLabel>
-        <FormControl>{children}</FormControl>
-        <FormDescription>{description}</FormDescription>
-        <FormMessage />
-      </FormItem>
-    );
-  },
-);
+const RenderFormItem: React.FC<RenderFormItemProps> = ({
+  label,
+  description,
+  children,
+}) => {
+  return (
+    <FormItem>
+      <FormLabel>{label}</FormLabel>
+      <FormControl>{children}</FormControl>
+      <FormDescription>{description}</FormDescription>
+      <FormMessage />
+    </FormItem>
+  );
+};
 
 export default RenderFormItem;
