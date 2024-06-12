@@ -88,7 +88,7 @@ const Contact: React.FC = () => {
                 description="返信先のメールアドレス"
               >
                 <Input
-                  placeholder="Enter your email"
+                  placeholder="user@example.com"
                   disabled={sendState === "sending"}
                   autoComplete="off"
                   {...field}
