@@ -124,7 +124,7 @@ const Contact: React.FC = () => {
               </RenderFormItem>
             )}
           />
-          <Button type="submit">
+          <Button type="submit" disabled={sendState !== "not_sent"}>
             {sendState === "sending" && (
               <div className="mr-1 h-5 w-5 animate-spin rounded-full border-2 border-t-transparent" />
             )}
