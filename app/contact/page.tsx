@@ -15,7 +15,7 @@ import React from "react";
 const formSchema = z.object({
   email: z
     .string({
-      required_error: "メアド入れろカス",
+      required_error: "メールアドレスをいれてね",
     })
     .email({
       message: "メアドちゃうわボケ",
