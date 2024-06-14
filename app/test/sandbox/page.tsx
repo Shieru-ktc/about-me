@@ -10,7 +10,7 @@ const SandBoxPage: React.FC = () => {
     <>
       <div>
         <p>My sandbox...</p>
-        <Accordion type="multiple" collapsible>
+        <Accordion type="multiple">
           <AccordionItem value="item-1">
             <AccordionTrigger>好きなゲームについて</AccordionTrigger>
             <AccordionContent>
@@ -36,9 +36,7 @@ const SandBoxPage: React.FC = () => {
           <AccordionItem value="item-5">
             <AccordionTrigger>好きなコードについて</AccordionTrigger>
             <AccordionContent>
-              <code>
-                0xford*University
-              </code>
+              <code>0xford*University</code>
               <br />
               <p>
                 これはPythonのコードです。なにが出力されるか予想してみてください。
