@@ -4,6 +4,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import Image from "next/image";
+import osuPic from "@/public/osu-screenshot.png";
 
 const About: React.FC = () => {
   return (
@@ -13,7 +15,12 @@ const About: React.FC = () => {
           <AccordionTrigger>好きなゲームは？</AccordionTrigger>
           <AccordionContent>
             <div className="m-1 md:flex md:items-center">
-              <img src="osu-screenshot.png" className="rounded-xl md:w-1/3" />
+              <Image
+                alt="screenshot of osu! lazer"
+                src={osuPic}
+                className="rounded-xl md:w-1/3"
+                placeholder="blur"
+              />
               <p className="text-md mx-2">
                 <a
                   className="bg-gradient-to-r from-pink-400 to-pink-700 bg-clip-text text-5xl font-semibold text-transparent dark:from-pink-700 dark:to-pink-400"
@@ -71,9 +78,7 @@ const About: React.FC = () => {
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-6">
-          <AccordionTrigger>
-            好きなPhasmophobiaのゴーストは？
-          </AccordionTrigger>
+          <AccordionTrigger>好きなPhasmophobiaのゴーストは？</AccordionTrigger>
           <AccordionContent>
             ハントゥちゃんわかりやすくてすき。
           </AccordionContent>
