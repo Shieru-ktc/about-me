@@ -6,6 +6,15 @@ import {
 } from "@/components/ui/accordion";
 import Image from "next/image";
 import osuPic from "@/public/osu-screenshot.png";
+import phasmoPic from "@/public/phasmophobia.jpg";
+import bsPic from "@/public/beatsaber.jpg";
+import { Creepster } from "next/font/google";
+import { twMerge } from "tailwind-merge";
+
+const creepster = Creepster({
+  weight: "400",
+  subsets: ["latin"],
+});
 
 const About: React.FC = () => {
   return (
@@ -13,7 +22,7 @@ const About: React.FC = () => {
       <Accordion type="multiple">
         <AccordionItem value="item-1">
           <AccordionTrigger>好きなゲームは？</AccordionTrigger>
-          <AccordionContent>
+          <AccordionContent className="mx-auto max-w-[50vw]">
             <div className="m-1 md:flex md:items-center">
               <Image
                 alt="screenshot of osu! lazer"
@@ -40,12 +49,62 @@ const About: React.FC = () => {
                 starsあたりがfcできない。クソゲー。数年やってるけど。
               </p>
             </div>
+            <div className="m-1 flex-row-reverse md:flex md:items-center">
+              <Image
+                alt="screenshot of Phasmophobia trailer"
+                src={phasmoPic}
+                className="rounded-xl md:w-1/3"
+                placeholder="blur"
+              />
+              <p className="text-md mx-2">
+                <a
+                  href="https://www.kineticgames.co.uk/"
+                  className={twMerge(
+                    "text-5xl font-semibold",
+                    creepster.className,
+                  )}
+                >
+                  Phasmophobia
+                </a>
+                <br />
+                Phasmophobiaは、最大4人のフレンドとプレイできる幽霊調査型ホラーゲームです。
+                <br />
+                バカゲーです。
+              </p>
+            </div>
+            <div className="m-1 md:flex md:items-center">
+              <Image
+                alt="screenshot of BeatSaber trailer"
+                src={bsPic}
+                className="rounded-xl md:w-1/3"
+                placeholder="blur"
+              />
+              <p className="text-md mx-2">
+                <a
+                  href="https://osu.ppy.sh"
+                  className={"text-5xl font-semibold"}
+                >
+                  <span className={"text-red-600 dark:text-red-400"}>Beat</span>{" "}
+                  <span className={"text-blue-600 dark:text-blue-400"}>
+                    Saber
+                  </span>
+                </a>
+                <br />
+                Beat Saberは、ビートに合わせてリズムを切るVRゲームです。
+                <br />
+                意外と運動になるけど、次の日は筋肉痛に見舞われるので注意。
+              </p>
+            </div>
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-2">
           <AccordionTrigger>好きな食べ物は？</AccordionTrigger>
           <AccordionContent>
-            そうめん超うまい。Amazonに3kgの訳ありそうめんが売ってるんでおすすめしたいんですが、みんなが買い始めると私の分がなくなるので買わないでください。
+            そうめん超うまい。
+            <a href="https://www.amazon.co.jp/dp/B01DZGAQ4K/">
+              Amazonに3kgの訳ありそうめん
+            </a>
+            が売ってるんでおすすめしたいんですが、みんなが買い始めると私の分がなくなるので買わないでください。
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-3">
@@ -81,6 +140,13 @@ const About: React.FC = () => {
           <AccordionTrigger>好きなPhasmophobiaのゴーストは？</AccordionTrigger>
           <AccordionContent>
             ハントゥちゃんわかりやすくてすき。
+          </AccordionContent>
+        </AccordionItem>
+        <AccordionItem value="item-7">
+          <AccordionTrigger>好きなBeat Saberの譜面は？</AccordionTrigger>
+          <AccordionContent>
+            Spin Eternallyとか、
+            <a href="https://beatsaver.com/maps/e4d">Ange du blanc pur</a>とか。
           </AccordionContent>
         </AccordionItem>
       </Accordion>
