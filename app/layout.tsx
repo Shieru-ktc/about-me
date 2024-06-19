@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Noto_Sans_JP } from "next/font/google";
 import "./globals.css";
 import Header from "../components/Header";
 import { ThemeProvider } from "../components/theme-provider";
@@ -8,6 +8,7 @@ import { Toaster } from "@/components/ui/toaster";
 import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
+const notoSans = Noto_Sans_JP({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "じこしょーかい",
@@ -25,6 +26,7 @@ export default function RootLayout({
       <body
         className={twMerge(
           inter.className,
+          notoSans.className,
           "overflow-y-scroll transition-all ease-in-out",
         )}
       >
