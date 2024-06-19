@@ -74,4 +74,12 @@
     body {
       @apply bg-background text-foreground;
     }
+
+    p {
+      margin-top: 1rem;
+    }
+
+    hr {
+      margin-top: 1rem;
+    }
   }

@@ -15,6 +15,18 @@ const Home: React.FC = () => {
         </span>
         をご活用ください！
       </p>
+      <hr />
+      <p className="text-3xl font-bold">サイトマップ</p>
+      <p>
+        私の好きなものなど、一般的なプロフィールについては
+        <a
+          href="/profile"
+          className="text-blue-600 hover:underline dark:text-blue-400"
+        >
+          こちら
+        </a>
+        をご覧ください！
+      </p>
     </>
   );
 };
