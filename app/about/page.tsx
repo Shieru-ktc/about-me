@@ -8,6 +8,7 @@ import Image from "next/image";
 import osuPic from "@/public/osu-screenshot.png";
 import phasmoPic from "@/public/phasmophobia.jpg";
 import bsPic from "@/public/beatsaber.jpg";
+import soumenPic from "@/public/soumen.jpg";
 import { Creepster } from "next/font/google";
 import { twMerge } from "tailwind-merge";
 
@@ -67,9 +68,9 @@ const About: React.FC = () => {
                   Phasmophobia
                 </a>
                 <br />
-                Phasmophobiaは、最大4人のフレンドとプレイできる幽霊調査型ホラーゲームです。
+                Phasmophobiaは、最大4人でプレイできる幽霊調査型ホラーゲームです。
                 <br />
-                バカゲーです。
+                プレイ人数が4に近づけば近づくほどバカゲーになります。
               </p>
             </div>
             <div className="m-1 md:flex md:items-center">
@@ -81,7 +82,7 @@ const About: React.FC = () => {
               />
               <p className="text-md mx-2">
                 <a
-                  href="https://osu.ppy.sh"
+                  href="https://store.steampowered.com/app/620980/Beat_Saber/"
                   className={"text-5xl font-semibold"}
                 >
                   <span className={"text-red-600 dark:text-red-400"}>Beat</span>{" "}
@@ -101,10 +102,19 @@ const About: React.FC = () => {
           <AccordionTrigger>好きな食べ物は？</AccordionTrigger>
           <AccordionContent>
             そうめん超うまい。
-            <a href="https://www.amazon.co.jp/dp/B01DZGAQ4K/">
+            <a
+              href="https://www.amazon.co.jp/dp/B01DZGAQ4K/"
+              className="text-blue-600 no-underline hover:underline dark:text-blue-400"
+            >
               Amazonに3kgの訳ありそうめん
             </a>
             が売ってるんでおすすめしたいんですが、みんなが買い始めると私の分がなくなるので買わないでください。
+            <Image
+              alt="Photo of Soumen"
+              src={soumenPic}
+              className="w-1/3 rounded-xl"
+              placeholder="blur"
+            />
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-3">
@@ -146,7 +156,13 @@ const About: React.FC = () => {
           <AccordionTrigger>好きなBeat Saberの譜面は？</AccordionTrigger>
           <AccordionContent>
             Spin Eternallyとか、
-            <a href="https://beatsaver.com/maps/e4d">Ange du blanc pur</a>とか。
+            <a
+              href="https://beatsaver.com/maps/e4d"
+              className="text-blue-600 no-underline hover:underline dark:text-blue-400"
+            >
+              Ange du blanc pur
+            </a>
+            とか。
           </AccordionContent>
         </AccordionItem>
       </Accordion>
