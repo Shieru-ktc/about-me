@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Home: React.FC = () => {
   return (
     <>
@@ -19,12 +21,12 @@ const Home: React.FC = () => {
       <p className="text-3xl font-bold">サイトマップ</p>
       <p>
         私の好きなものなど、一般的なプロフィールについては
-        <a
+        <Link
           href="/profile"
           className="text-blue-600 hover:underline dark:text-blue-400"
         >
           こちら
-        </a>
+        </Link>
         をご覧ください！
       </p>
     </>

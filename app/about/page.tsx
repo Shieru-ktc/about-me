@@ -11,6 +11,7 @@ import bsPic from "@/public/beatsaber.jpg";
 import soumenPic from "@/public/soumen.jpg";
 import { Creepster } from "next/font/google";
 import { twMerge } from "tailwind-merge";
+import Link from "next/link";
 
 const creepster = Creepster({
   weight: "400",
@@ -32,12 +33,12 @@ const About: React.FC = () => {
                 placeholder="blur"
               />
               <p className="text-md mx-2">
-                <a
+                <Link
                   className="bg-gradient-to-r from-pink-400 to-pink-700 bg-clip-text text-5xl font-semibold text-transparent dark:from-pink-700 dark:to-pink-400"
                   href="https://osu.ppy.sh"
                 >
                   osu!
-                </a>{" "}
+                </Link>{" "}
                 -
                 <span className="text-muted-foreground">
                   Rhythm is just a <span className="italic">*click*</span> away!
@@ -48,6 +49,14 @@ const About: React.FC = () => {
                 <br />
                 かれこれ数年やってます。でもいまだに6.5
                 starsあたりがfcできない。クソゲー。数年やってるけど。
+                <hr />
+                私のosu!のプロフィールは
+                <a
+                  href="https://osu.ppy.sh/users/32324214"
+                  className="text-blue-600 hover:underline dark:text-blue-400"
+                >
+                  こちら
+                </a>
               </p>
             </div>
             <div className="m-1 flex-row-reverse md:flex md:items-center">

@@ -10,49 +10,42 @@ import { Textarea } from "@/components/ui/textarea";
 import { FaPaperPlane } from "react-icons/fa";
 import { useState } from "react";
 import { useToast } from "@/components/ui/use-toast";
+import { ContactFormSchema } from "../schema/ContactFormSchema";
 import React from "react";
-
-const formSchema = z.object({
-  email: z
-    .string({
-      required_error: "メールアドレスをいれてね",
-    })
-    .email({
-      message: "メアドちゃうわボケ",
-    }),
-  name: z.string({
-    required_error: "名無しやめろ2chちゃうねん",
-  }),
-  content: z
-    .string({
-      required_error: "なんでここ空やねん何しに来たん",
-    })
-    .min(5, {
-      message: "短すぎじゃアホ",
-    })
-    .max(1000, {
-      message: "長すぎやバカタレ",
-    }),
-});
 
 type SendState = "not_sent" | "sending" | "sent";
 
 const Contact: React.FC = () => {
   const { toast } = useToast();
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+  const form = useForm<z.infer<typeof ContactFormSchema>>({
+    resolver: zodResolver(ContactFormSchema),
   });
 
-  const onSubmit = (values: z.infer<typeof formSchema>) => {
+  const onSubmit = (values: z.infer<typeof ContactFormSchema>) => {
     console.log(values);
     setSendState("sending");
+    const request = fetch("/api/contact", {
+      method: "POST",
+      body: JSON.stringify(values),
+    });
+    request
+      .then(() => {
+        setSendState("sent");
+        toast({
+          title: "送信完了！",
+          description: "お問い合わせを受け付けました。",
+        });
+      })
+      .catch(() => {
+        setSendState("not_sent");
+        toast({
+          title: "送信失敗",
+          description: "送信中にエラーが発生しました。",
+          color: "desructive",
+        });
+      });
     setTimeout(() => {
       // TODO: バックエンドでメールを送信する
-      setSendState("sent");
-      toast({
-        title: "送信完了！",
-        description: "お問い合わせを受け付けました。",
-      });
     }, 1000);
   };
 
