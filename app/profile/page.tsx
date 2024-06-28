@@ -36,6 +36,15 @@ const ProfilePage = () => {
         <li>つよくなる</li>
         <li>おともだちをいっぱいつくる</li>
       </ul>
+      <hr />
+      <h2 className="text-xl">やったこと</h2>
+      <ul className="ml-5 list-disc">
+        <li>バイト先でちょっとしたツールつくったよ</li>
+        <li>バイト先のパソコンにLinuxを突っ込んだよ</li>
+        <li>
+          ノートPCに入ってるWindowsを消し飛ばしてLinux突っ込んだらそれもぶっ壊れたよ
+        </li>
+      </ul>
     </>
   );
 };

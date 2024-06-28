@@ -8,17 +8,30 @@ const MENU_ITEMS: HeaderMenuItem[] = [
     children: "ホーム",
   },
   {
-    href: "/about",
-    children: "自己紹介",
+    href: "/profile",
+    children: "プロフィール",
+  },
+  {
+    href: "/likes",
+    children: "好きなもの",
+  },
+  {
+    href: "/sns",
+    children: "SNSアカウント",
+  },
+  {
+    href: "/faq",
+    children: "その他の質問",
   },
   {
     href: "/contact",
     children: "お問い合わせ",
   },
-  {
-    href: "/test/sandbox",
-    children: "サンドボックス",
-  },
+
+  // {
+  //   href: "/test/sandbox",
+  //   children: "サンドボックス",
+  // },
 ];
 
 const Header: React.FC<PropsWithClassName> = ({ className }) => {
@@ -29,7 +42,7 @@ const Header: React.FC<PropsWithClassName> = ({ className }) => {
         className,
       )}
     >
-      <span className="my-auto text-2xl font-bold">じこしょーかい</span>
+      <span className="my-auto text-2xl font-bold">自己紹介</span>
       <div className="ml-auto flex">
         <HeaderMenu items={MENU_ITEMS} />
       </div>

@@ -44,9 +44,6 @@ const Contact: React.FC = () => {
           color: "desructive",
         });
       });
-    setTimeout(() => {
-      // TODO: バックエンドでメールを送信する
-    }, 1000);
   };
 
   const [sendState, setSendState] = useState<SendState>("not_sent");
