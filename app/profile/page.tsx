@@ -29,6 +29,13 @@ const ProfilePage = () => {
       <p>20xx年 米原市立双葉中学校 卒業</p>
       <p>20xx年 角川ドワンゴ学園 S高等学校 卒業</p>
       <p>20xx年 京都デザイン&テクノロジー専門学校 入学</p>
+      <hr />
+      <h2 className="text-xl">京都テックでやりたいこと</h2>
+      <ul className="ml-5 list-disc">
+        <li>いろんな言語を勉強する</li>
+        <li>つよくなる</li>
+        <li>おともだちをいっぱいつくる</li>
+      </ul>
     </>
   );
 };

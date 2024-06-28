@@ -129,7 +129,7 @@ const About: React.FC = () => {
         <AccordionItem value="item-3">
           <AccordionTrigger>なんの言語が好き？</AccordionTrigger>
           <AccordionContent>
-            Pythonがだいすき。でもこのサイトはTypeScriptで書いてる。うーんこの。
+            プログラミング言語で言えば、Pythonがだいすき。でもこのサイトはTypeScriptで書いてる。うーんこの。
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-4">
