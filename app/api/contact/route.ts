@@ -1,5 +1,4 @@
 import { ContactFormSchema } from "@/app/schema/ContactFormSchema";
-import { NextApiRequest, NextApiResponse } from "next";
 import { NextRequest, NextResponse } from "next/server";
 import { ZodIssue } from "zod";
 
