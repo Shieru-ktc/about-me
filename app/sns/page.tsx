@@ -2,7 +2,6 @@ import SNSComponent from "@/components/SNSComponent";
 import {
   FaDiscord,
   FaGithub,
-  FaInstagram,
   FaTwitter,
   FaYoutube,
 } from "react-icons/fa";
