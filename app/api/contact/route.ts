@@ -1,10 +1,5 @@
 import { ContactFormSchema } from "@/app/schema/ContactFormSchema";
 import { NextRequest, NextResponse } from "next/server";
-import { ZodIssue } from "zod";
-
-type ResponseSchema =
-  | { success: true }
-  | { success: false; errors: ZodIssue[] };
 
 export async function POST(request: NextRequest) {
   const json = await request.json();
