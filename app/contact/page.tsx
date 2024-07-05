@@ -52,7 +52,7 @@ const Contact: React.FC = () => {
     <Form {...form}>
       {sendState === "sent" ? (
         <>
-          <p className="text-3xl font-light">Your message has been sent!</p>
+          <p className="text-3xl font-light">メッセージを送信しました！</p>
           <hr className="my-5" />
           <p>お問い合わせを受け付けました。近いうちに返信します！</p>
           <p className="text-sm text-muted-foreground">
