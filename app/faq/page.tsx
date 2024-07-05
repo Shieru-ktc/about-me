@@ -14,20 +14,19 @@ const FAQS = [
     question: "Android派？iPhone派？",
     answer: (
       <>
-        Androidしか勝たん。iPhone使うとPC、イヤホン、スマートウォッチやらなんやらApple製品で固めないといけないのがつらいんだよね。
+        Androidしか勝たん。iPhone使うとPC、イヤホン、スマートウォッチやらなんやらApple製品で固めないとQOLが上がんないからきつい。
         <br />
-        いずれApple Houseとか言って家出してきそう。あとApple CarとかApple
-        葬式とか。
+        「AppleにはAirDropがあるから便利！」って言ってるやつはAndroidの<a className="dark:text-blue-400 text-blue-600 hover:underline" href="https://www.android.com/intl/ja_jp/articles/208/">Nearby Share</a>について学んでください。
       </>
     ),
   },
   {
-    question: "好きなコードについて",
+    question: "好きなPythonのコードについて",
     answer: (
       <>
         <code>0xfor-d*University</code>
         <br />
-        これはPythonのコードです。なにが出力されるか予想してみてください。
+        なにが出力されるか予想してみてください。
         <br />
         エラー？それとも、何らかの別の結果？
       </>
