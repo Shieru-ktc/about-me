@@ -38,4 +38,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 # about-me
 
 これはぼくの自己紹介リポジトリです。  
-Next.jsとTailwindCSSで書いてます。
+Next.jsとTailwindCSSで書いてます。  
+
+最近頑張ってNeovim (LazyVim)とLazyGit使ってます。むずいです。

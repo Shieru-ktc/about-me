@@ -69,7 +69,7 @@ const LikesPage: React.FC = () => {
           <br />
           Phasmophobiaは、最大4人でプレイできる幽霊調査型ホラーゲームです。
           <br />
-          プレイ人数が4に近づけば近づくほどバカゲーになります。
+          プレイ人数が4に近づけば近づくほどバカゲーになります。<span className="text-gray-500">逆に一人でやればそれはもうホラーゲームです</span>
         </p>
       </div>
       <div className="m-1 md:flex md:items-center">
