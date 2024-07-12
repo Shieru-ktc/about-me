@@ -19,10 +19,6 @@ const MENU_ITEMS: HeaderMenuItem[] = [
   {
     href: "/faq",
     children: "よく来ない質問",
-  },
-  {
-    href: "/why-kyoto-tech",
-    children: "京都テックに来た理由"
   }
 ];
 
