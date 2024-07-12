@@ -25,9 +25,9 @@ const ProfilePage = () => {
       </dl>
       <hr />
       <h2 className="text-xl font-bold">学歴</h2>
-      <p>20xx年 米原市立坂田小学校 卒業<small className="text-gray-500 ml-1">(教師がクソでした)</small></p>
+      <p>20xx年 米原市立坂田小学校 卒業<small className="text-gray-500 ml-1">(クソ教師でした)</small></p>
       <p>20xx年 米原市立双葉中学校 卒業<small className="text-gray-500 ml-1">(プログラミングがやりたすぎて不登校になりました)</small></p>
-      <p>20xx年 角川ドワンゴ学園 S高等学校 卒業<small className="text-gray-500 ml-1">(最近情報漏洩したとこです)</small></p>
+      <p>20xx年 角川ドワンゴ学園 S高等学校 卒業<small className="text-gray-500 ml-1">(情報漏えいして大問題になってるとこです)</small></p>
       <p>20xx年 京都デザイン&テクノロジー専門学校 入学<small className="text-gray-600 dark:text-gray-400 ml-1">(結構楽しいです)</small></p>
       <hr />
       <h2 className="text-xl font-bold">京都テックでやりたいこと</h2>
@@ -38,7 +38,7 @@ const ProfilePage = () => {
         <li>さいきょうのVimmerになる</li>
       </ul>
       <hr />
-      <h2 className="text-xl font-bold">やったこと</h2>
+      <h2 className="text-xl font-bold">やったこと<span className="ml-3 text-gray-500 text-sm">(やらかしたこと)</span></h2>
       <ul className="ml-5 list-disc">
         <li>バイト先でちょっとしたツールつくったよ</li>
         <li>バイト先のパソコンにUbuntuを突っ込んだよ</li>
@@ -46,6 +46,7 @@ const ProfilePage = () => {
           ノートPCに入ってるWindowsを消し飛ばしてLinux突っ込んだらそれもぶっ壊れたよ
         </li>
         <li>Adobeからログアウトしてないやつのプロフィールを片っ端からログアウトしろ太郎に変えたよ</li>
+        <li>アカウント管理ミスってAmazonから280万円の請求が来たよ</li>
       </ul>
     </>
   );

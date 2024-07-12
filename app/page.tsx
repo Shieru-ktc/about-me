@@ -4,7 +4,7 @@ const Home: React.FC = () => {
   return (
     <>
       <p className="text-5xl font-bold">Welcome (or back)!</p>
-      <p>
+      <p className="mt-2">
         私の自己紹介サイトへようこそ！
         <br />
         それほど多くのコンテンツがあるわけではありませんが、楽しんでいただけると嬉しいです！

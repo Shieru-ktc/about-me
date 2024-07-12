@@ -21,17 +21,12 @@ const MENU_ITEMS: HeaderMenuItem[] = [
   },
   {
     href: "/faq",
-    children: "その他の質問",
+    children: "よく来ない質問",
   },
   {
     href: "/contact",
     children: "お問い合わせ",
   },
-
-  // {
-  //   href: "/test/sandbox",
-  //   children: "サンドボックス",
-  // },
 ];
 
 const Header: React.FC<PropsWithClassName> = ({ className }) => {
