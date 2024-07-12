@@ -10,7 +10,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { FaPaperPlane } from "react-icons/fa";
 import { useState } from "react";
 import { useToast } from "@/components/ui/use-toast";
-import { ContactFormSchema } from "../schema/ContactFormSchema";
+import { ContactFormSchema } from "@/validations/schema/ContactFormSchema";
 import React from "react";
 
 type SendState = "not_sent" | "sending" | "sent";

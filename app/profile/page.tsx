@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-import "./profile.css";
 
 type DtDdProps = {
   dt: ReactNode;
