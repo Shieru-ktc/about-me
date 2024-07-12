@@ -24,16 +24,16 @@ const MENU_ITEMS: HeaderMenuItem[] = [
     children: "よく来ない質問",
   },
   {
-    href: "/contact",
-    children: "お問い合わせ",
-  },
+    href: "/why-kyoto-tech",
+    children: "京都テックに来た理由"
+  }
 ];
 
 const Header: React.FC<PropsWithClassName> = ({ className }) => {
   return (
     <header
       className={twMerge(
-        "flex h-auto rounded-xl bg-blue-200 px-2 py-4 dark:bg-blue-800",
+        "flex h-auto rounded-xl bg-blue-200 px-2 py-4 dark:bg-blue-800 flex-col xl:flex-row",
         className,
       )}
     >
