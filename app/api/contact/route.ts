@@ -1,4 +1,4 @@
-import { ContactFormSchema } from "@/app/schema/ContactFormSchema";
+import { ContactFormSchema } from "@/validations/schema/ContactFormSchema";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(request: NextRequest) {
