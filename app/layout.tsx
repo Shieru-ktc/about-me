@@ -6,7 +6,6 @@ import { ThemeProvider } from "../components/theme-provider";
 import { twMerge } from "tailwind-merge";
 import { Toaster } from "@/components/ui/toaster";
 import Footer from "@/components/Footer";
-import LoadingScreen from "@/components/Loading";
 
 const inter = Inter({ subsets: ["latin"] });
 const notoSans = Noto_Sans_JP({ subsets: ["latin"] });
@@ -37,7 +36,6 @@ export default function RootLayout({
           enableSystem
           storageKey="theme"
         >
-          <LoadingScreen />
           <div className="flex h-[100vh] flex-col">
             <Header className="sticky top-0 z-50 m-1" />
             <div className="mx-8 my-2 flex-grow md:mx-16 lg:mx-32">
