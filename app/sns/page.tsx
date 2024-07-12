@@ -12,14 +12,6 @@ const SNSPage = () => {
       <h1 className="text-5xl">SNSアカウント</h1>
       <hr className="my-5" />
       <SNSComponent
-        icon={<FaDiscord />}
-        href="https://discord.com"
-        title="Discord"
-        description="私が大好きなメッセージングツール、Discord。正直LINEより好き。"
-        account="Shieru292"
-        className="my-2 border-[#5764F2]"
-      />
-      <SNSComponent
         icon={<FaTwitter />}
         href="https://twitter.com"
         title="Twitter"
@@ -41,7 +33,15 @@ const SNSPage = () => {
         title="GitHub"
         description="このサイトのリポジトリがあります"
         account="Shieru-ktc"
-        className="my-2 border-[#086ADD]"
+        className="my-2 border-[#00A742]"
+      />
+      <SNSComponent
+        icon={<FaDiscord />}
+        href="https://discord.com"
+        title="Discord"
+        description="私が大好きなメッセージングツール、Discord。正直LINEより好き。"
+        account="Shieru292"
+        className="my-2 border-[#5764F2]"
       />
     </>
   );
