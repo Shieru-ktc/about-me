@@ -20,7 +20,7 @@ const Home: React.FC = () => {
       <hr />
       <p className="text-3xl font-bold">サイトマップ</p>
       <p>
-        私の好きなものなど、一般的なプロフィールについては
+        私の基本的なプロフィールについては、
         <Link
           href="/profile"
           className="text-blue-600 hover:underline dark:text-blue-400"
@@ -28,6 +28,30 @@ const Home: React.FC = () => {
           こちら
         </Link>
         をご覧ください！
+      </p>
+      <p>
+        私の好きなものについては、
+        <Link
+          href="/likes"
+          className="text-blue-600 hover:underline dark:text-blue-400"
+        >
+          こちら
+        </Link>
+        にあります！
+      </p>
+      <p>
+        各種SNSもやってます。
+        <span className="text-gray-400 dark:text-gray-600">
+          （まともに更新してませんが…）
+        </span>{" "}
+        <br />
+        <Link
+          href="/sns"
+          className="text-blue-600 hover:underline dark:text-blue-400"
+        >
+          こちら
+        </Link>
+        にSNSアカウントをまとめてあります！
       </p>
     </>
   );

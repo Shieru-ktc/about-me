@@ -1,5 +1,5 @@
 type PropsWithClassName = {
-    className?: string
-}
+  className?: string;
+};
 
-export default PropsWithClassName
+export default PropsWithClassName;

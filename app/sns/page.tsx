@@ -1,16 +1,12 @@
 import SNSComponent from "@/components/SNSComponent";
-import {
-  FaDiscord,
-  FaGithub,
-  FaTwitter,
-  FaYoutube,
-} from "react-icons/fa";
+import { FaDiscord, FaGithub, FaTwitter, FaYoutube } from "react-icons/fa";
 
 const SNSPage = () => {
   return (
     <>
       <h1 className="text-5xl">SNSアカウント</h1>
       <hr className="my-5" />
+
       <SNSComponent
         icon={<FaTwitter />}
         href="https://twitter.com"
@@ -37,7 +33,7 @@ const SNSPage = () => {
       />
       <SNSComponent
         icon={<FaDiscord />}
-        href="https://discord.com"
+        href="https://discord.com/users/763778128052879370"
         title="Discord"
         description="私が大好きなメッセージングツール、Discord。正直LINEより好き。"
         account="Shieru292"

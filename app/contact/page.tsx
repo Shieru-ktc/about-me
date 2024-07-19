@@ -22,7 +22,6 @@ const Contact: React.FC = () => {
   });
 
   const onSubmit = (values: z.infer<typeof ContactFormSchema>) => {
-    console.log(values);
     setSendState("sending");
     const request = fetch("/api/contact", {
       method: "POST",
@@ -41,7 +40,7 @@ const Contact: React.FC = () => {
         toast({
           title: "送信失敗",
           description: "送信中にエラーが発生しました。",
-          color: "desructive",
+          color: "destructive",
         });
       });
   };

@@ -12,8 +12,7 @@ const notoSans = Noto_Sans_JP({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "じこしょーかい",
-  description:
-    "じこしょーかい",
+  description: "じこしょーかい",
 };
 
 export default function RootLayout({

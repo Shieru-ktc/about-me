@@ -9,7 +9,7 @@ export const ContactFormSchema = z.object({
       message: "メアドちゃうわボケ",
     }),
   name: z.string({
-    required_error: "名無しやめろ2chちゃうねん",
+    required_error: "名無しやめろ",
   }),
   content: z
     .string({

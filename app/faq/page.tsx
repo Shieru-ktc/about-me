@@ -8,7 +8,8 @@ import {
 const FAQS = [
   {
     question: "なんの言語が好き？",
-    answer: "プログラミング言語で言えば、Pythonがだいすき。でもこのサイトはTypeScriptで書いてる。うーんこの。",
+    answer:
+      "プログラミング言語で言えば、Pythonがだいすき。でもこのサイトはTypeScriptで書いてる。うーんこの。",
   },
   {
     question: "Android派？iPhone派？",
@@ -16,7 +17,14 @@ const FAQS = [
       <>
         Androidしか勝たん。iPhone使うとPC、イヤホン、スマートウォッチやらなんやらApple製品で固めないとQOLが上がんないからきつい。
         <br />
-        「AppleにはAirDropがあるから便利！」って言ってるやつはAndroidの<a className="dark:text-blue-400 text-blue-600 hover:underline" href="https://www.android.com/intl/ja_jp/articles/208/">Nearby Share</a>について学んでください。
+        「AppleにはAirDropがあるから便利！」って言ってるやつはAndroidの
+        <a
+          className="text-blue-600 hover:underline dark:text-blue-400"
+          href="https://www.android.com/intl/ja_jp/articles/208/"
+        >
+          Nearby Share
+        </a>
+        について学んでください。
       </>
     ),
   },
@@ -57,21 +65,26 @@ type FAQProps = {
   i: number;
   question: React.ReactNode;
   answer: React.ReactNode;
-}
+};
 const FAQComponent: React.FC<FAQProps> = ({ i, question, answer }) => {
   return (
     <AccordionItem value={`value-${i}`}>
       <AccordionTrigger>{question}</AccordionTrigger>
       <AccordionContent>{answer}</AccordionContent>
     </AccordionItem>
-  )
-}
+  );
+};
 const FAQPage: React.FC = () => {
   return (
     <>
       <Accordion type="multiple">
         {FAQS.map((faq, i) => (
-          <FAQComponent key={i} i={i} question={faq.question} answer={faq.answer} />
+          <FAQComponent
+            key={i}
+            i={i}
+            question={faq.question}
+            answer={faq.answer}
+          />
         ))}
       </Accordion>
     </>
