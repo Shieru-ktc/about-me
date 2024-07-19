@@ -2,7 +2,7 @@ import type { MDXComponents } from "mdx/types";
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
     h1: (props) => <h1 className="my-6 text-5xl font-bold" {...props} />,
-    h2: (props) => <h2 className="my-5 text-4xl font-semibold" {...props} />,
+    h2: (props) => <h2 className="my-5 text-[40px] font-semibold" {...props} />,
     h3: (props) => <h3 className="my-4 text-3xl font-semibold" {...props} />,
     h4: (props) => <h4 className="my-3 text-2xl font-semibold" {...props} />,
     h5: (props) => <h5 className="my-2 text-xl font-semibold" {...props} />,
