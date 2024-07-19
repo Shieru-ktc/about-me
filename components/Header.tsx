@@ -19,7 +19,7 @@ const MENU_ITEMS: HeaderMenuItem[] = [
   {
     href: "/faq",
     children: "よく来ない質問",
-  }
+  },
 ];
 
 const Header: React.FC<PropsWithClassName> = ({ className }) => {
@@ -30,7 +30,9 @@ const Header: React.FC<PropsWithClassName> = ({ className }) => {
         className,
       )}
     >
-      <Link className="my-auto text-2xl font-bold" href="/">自己紹介</Link>
+      <Link className="my-auto text-2xl font-bold" href="/">
+        自己紹介
+      </Link>
       <div className="ml-auto flex">
         <HeaderMenu items={MENU_ITEMS} />
       </div>

@@ -1,5 +1,5 @@
 import { Separator } from "./ui/separator";
-import Link from "next/link"
+import Link from "next/link";
 
 const Footer: React.FC = () => {
   return (
@@ -24,7 +24,12 @@ const Footer: React.FC = () => {
                 </a>
               </div>
             </div>
-            <Link href="/contact" className="text-blue-600 dark:text-blue-200 hover:underline">お問い合わせ</Link>
+            <Link
+              href="/contact"
+              className="text-blue-600 hover:underline dark:text-blue-200"
+            >
+              お問い合わせ
+            </Link>
           </div>
         </div>
       </div>
