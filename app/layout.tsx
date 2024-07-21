@@ -8,7 +8,10 @@ import { Toaster } from "@/components/ui/toaster";
 import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
-const notoSans = Noto_Sans_JP({ subsets: ["latin"] });
+const notoSans = Noto_Sans_JP({
+  subsets: ["latin"],
+  fallback: ["Noto Sans JP"],
+});
 
 export const metadata: Metadata = {
   title: "じこしょーかい",

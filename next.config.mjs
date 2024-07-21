@@ -1,4 +1,5 @@
 import withMDX from "@next/mdx";
+import remarkGfm from "remark-gfm";
 
 const nextConfig = {
   // Configure `pageExtensions` to include MDX files
@@ -10,5 +11,7 @@ export default withMDX({
   extension: /\.mdx?$/,
   options: {
     // Any specific MDX options can be added here
+    remarkPlugins: [remarkGfm],
+    rehypePlugins: [],
   },
 })(nextConfig);

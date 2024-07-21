@@ -1,4 +1,14 @@
 import type { MDXComponents } from "mdx/types";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+import Link from "next/link";
+
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
     h1: (props) => <h1 className="my-6 text-5xl font-bold" {...props} />,
@@ -9,10 +19,12 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     h6: (props) => <h6 className="my-1 text-lg font-semibold" {...props} />,
     p: (props) => <p className="my-2 text-base leading-7" {...props} />,
     a: (props) => (
-      <a
+      <Link
         className="text-blue-600 hover:underline dark:text-blue-400"
-        {...props}
-      />
+        href={props.href as string}
+      >
+        {props.children}
+      </Link>
     ),
     ul: (props) => (
       <ul className="my-4 ml-6 list-inside list-disc" {...props} />
@@ -37,14 +49,12 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         {...props}
       />
     ),
-    table: (props) => (
-      <table className="my-4 w-full border-collapse text-left" {...props} />
-    ),
-    thead: (props) => <thead className="bg-gray-200" {...props} />,
-    tbody: (props) => <tbody {...props} />,
-    tr: (props) => <tr className="border-b border-gray-300" {...props} />,
-    th: (props) => <th className="border border-gray-300 p-2" {...props} />,
-    td: (props) => <td className="border border-gray-300 p-2" {...props} />,
+    table: (props) => <Table {...props} />,
+    thead: (props) => <TableHeader {...props} />,
+    tbody: (props) => <TableBody {...props} />,
+    tr: (props) => <TableRow {...props} />,
+    th: (props) => <TableHead {...props} />,
+    td: (props) => <TableCell {...props} />,
     // imgじゃなくてImage使えって怒られるのとalt使えって怒られるので全部黙らせる
     // eslint-disable-next-line
     img: (props) => <img className="h-auto max-w-full" {...props} />,
