@@ -3,6 +3,8 @@ import osuPic from "@/public/osu-screenshot.png";
 import phasmoPic from "@/public/phasmophobia.jpg";
 import bsPic from "@/public/beatsaber.jpg";
 import soumenPic from "@/public/soumen.jpg";
+import lightArch from "@/public/archlight.png";
+import darkArch from "@/public/archdark.png";
 import { Creepster } from "next/font/google";
 import { twMerge } from "tailwind-merge";
 import Link from "next/link";
@@ -95,6 +97,22 @@ const LikesPage: React.FC = () => {
           <br />
           意外と運動になるけど、次の日は筋肉痛に見舞われるので注意。
         </p>
+      </div>
+      <h2 className="mt-5 text-3xl">OS</h2>
+      <div>
+        Arch is the best.
+        <Image
+          alt="Arch Linux Artwork"
+          src={lightArch}
+          className="block w-1/3 dark:hidden"
+          placeholder="blur"
+        />
+        <Image
+          alt="Arch Linux Artwork"
+          src={darkArch}
+          className="hidden w-1/3 dark:block"
+          placeholder="blur"
+        />
       </div>
       <h2 className="mt-5 text-3xl">食べ物</h2>
       <div>
