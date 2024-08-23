@@ -55,7 +55,7 @@ const Contact: React.FC = () => {
           <hr className="my-5" />
           <p>お問い合わせを受け付けました。近いうちに返信します！</p>
           <p className="text-sm text-muted-foreground">
-            このお問い合わせフォームはサンプルのものなので、実際には送信されていません！
+            このお問い合わせフォームはサンプルのものなので、実際には送信されていません。
           </p>
           <Button
             size="sm"
